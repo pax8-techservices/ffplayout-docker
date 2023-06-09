@@ -35,7 +35,7 @@ RUN apk update && \
     --enable-openssl --enable-libass --enable-libfdk-aac --enable-libfreetype \
     --enable-libfribidi --enable-libmp3lame --enable-libopus --enable-libvpx \
     --enable-libsrt --enable-libx264 --enable-libx265 --enable-libzmq && \
-    make -j $(nproc | awk '{print $1 / 2}') && \
+    make && \
     make install && \
     cd .. && \
     rm -rf ffmpeg && \
